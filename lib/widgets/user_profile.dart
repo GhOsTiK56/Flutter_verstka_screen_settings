@@ -12,6 +12,10 @@ class UserProfile extends StatelessWidget {
   }
 }
 
+class _MenuRowData {
+
+}
+
 class _MenuWidget extends StatelessWidget {
   const _MenuWidget({super.key});
 
@@ -55,23 +59,29 @@ class _MenuWidget extends StatelessWidget {
 
 
 class _MenuWidgetRow extends StatelessWidget {
-  final String _textMain;
-  final String _textHide;
+  final String _textMain; 
+  final String? _textHide;
+  final IconData? _icon;
 
   const _MenuWidgetRow({
     super.key,
     required String textMain,
-    required String textHide,
+    String? textHide, 
+    IconData? icon,
   }) : _textMain = textMain,
-       _textHide = textHide;
+       _textHide = textHide,
+       _icon = icon;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        if (_icon != null)
+          Icon(_icon),
         Text(_textMain, style: TextStyle(color: Colors.white, fontSize: 20)),
-        Text(_textHide, style: TextStyle(color: Colors.grey, fontSize: 15)),
+        if (_textHide != null) 
+          Text(_textHide, style: TextStyle(color: Colors.grey, fontSize: 15)),
       ],
     );
   }
