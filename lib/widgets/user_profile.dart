@@ -7,13 +7,13 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(children: [_UserIconWidget(), _MenuWidgetAccaunt()]),
+      body: Column(children: [_UserIconWidget(), _MenuWidget()]),
     );
   }
 }
 
-class _MenuWidgetAccaunt extends StatelessWidget {
-  const _MenuWidgetAccaunt({super.key});
+class _MenuWidget extends StatelessWidget {
+  const _MenuWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +32,17 @@ class _MenuWidgetAccaunt extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          _MenuWidgetAccauntRow(
+          _MenuWidgetRow(
             textMain: '+7 (953) 115-76-13',
             textHide: 'Tap for change your phone number',
           ),
           SizedBox(height: 10),
-          _MenuWidgetAccauntRow(
+          _MenuWidgetRow(
             textMain: '@KarenAkobyan5',
             textHide: 'User name',
           ),
           SizedBox(height: 10),
-          _MenuWidgetAccauntRow(
+          _MenuWidgetRow(
             textMain: 'Something about me',
             textHide: 'About myself',
           ),
@@ -53,11 +53,12 @@ class _MenuWidgetAccaunt extends StatelessWidget {
   }
 }
 
-class _MenuWidgetAccauntRow extends StatelessWidget {
+
+class _MenuWidgetRow extends StatelessWidget {
   final String _textMain;
   final String _textHide;
 
-  const _MenuWidgetAccauntRow({
+  const _MenuWidgetRow({
     super.key,
     required String textMain,
     required String textHide,
