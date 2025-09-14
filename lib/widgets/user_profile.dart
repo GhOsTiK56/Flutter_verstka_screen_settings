@@ -9,7 +9,7 @@ class UserProfile extends StatelessWidget {
   final List<MenuRowData> secondMenuRow = [
     MenuRowData(textMain: 'Chat Settings', icon: Icons.chat),
     MenuRowData(icon: Icons.lock , textMain: 'Privacy and Security', ),
-    MenuRowData(icon: Icons.notifications, textMain: 'Notifications and Sounds', ),
+    MenuRowData(icon: Icons.notifications, textMain: 'Notifications and Sounds', ), 
     MenuRowData(icon: Icons.storage, textMain: 'Data and Storage', ),
     MenuRowData(icon: Icons.power, textMain: 'Power Saving', ),
     MenuRowData(icon: Icons.chat, textMain: 'Chat Folders', ),
@@ -34,17 +34,19 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          _UserIconWidget(),
-          _MenuWidget(menuRow: firstMenuRow, textTag: 'Account'),
-          SizedBox(height: 10),
-          _MenuWidget(menuRow: secondMenuRow, textTag: 'Settings'),
-          SizedBox(height: 10),
-          _MenuWidget(menuRow: thirdMenuRow, textTag: 'Business'),
-          SizedBox(height: 10),
-          _MenuWidget(menuRow: fourtMenuRow, textTag: 'Help'),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            _UserIconWidget(),
+            _MenuWidget(menuRow: firstMenuRow, textTag: 'Account'),
+            SizedBox(height: 10),
+            _MenuWidget(menuRow: secondMenuRow, textTag: 'Settings'),
+            SizedBox(height: 10),
+            _MenuWidget(menuRow: thirdMenuRow, textTag: 'Business'),
+            SizedBox(height: 10),
+            _MenuWidget(menuRow: fourtMenuRow, textTag: 'Help'),
+          ],
+        ),
       ),
     );
   }
@@ -111,7 +113,7 @@ class _MenuWidgetRow extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ],
-          ),
+          ),SizedBox(height: 10,),
           Divider(height: 2, color: Colors.black,)
         ],
       )
