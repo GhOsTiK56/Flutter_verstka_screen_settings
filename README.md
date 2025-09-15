@@ -12,13 +12,10 @@
 
 ## Скриншоты
 
-Главный экран профиля:
-
-![Главный экран профиля](assets/images/screenshots/screen1.jpg)
-
-Меню настроек:
-
-![Меню настроек](assets/images/screenshots/screen2.jpg)
+<p align="center">
+  <img src="assets/images/screenshots/screen1.jpg" alt="Главный экран" width="200" />
+  <img src="assets/images/screenshots/screen2.jpg" alt="Меню настроек" width="200" />
+</p>
 
 ---
 
