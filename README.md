@@ -1,16 +1,38 @@
-# flutter_verstka_screen_settings
+# Экран профиля (Telegram-style)
 
-A new Flutter project.
+Этот проект демонстрирует реализацию экрана профиля в стиле Telegram на Flutter.  
+Экран включает:
 
-## Getting Started
+- Аватар пользователя
+- Основную информацию: имя, телефон, username, био
+- Меню настроек с иконками и подпунктами
+- Возможность тапнуть на элементы для дальнейшей обработки
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Скриншоты
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Главный экран профиля:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Главный экран профиля](assets/screenshots/screen1.jpg)
+
+Меню настроек:
+
+![Меню настроек](assets/screenshots/screen2.jpg)
+
+---
+
+## Технологии
+
+- Flutter 3.x
+- Dart
+- Material Design Widgets
+- Custom Widgets для строк меню и аватара
+
+---
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/GhOsTiK56/Flutter_verstka_screen_settings.git
