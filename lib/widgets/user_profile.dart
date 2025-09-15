@@ -34,19 +34,17 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _UserIconWidget(),
-            _MenuWidget(menuRow: firstMenuRow, textTag: 'Account'),
-            SizedBox(height: 10),
-            _MenuWidget(menuRow: secondMenuRow, textTag: 'Settings'),
-            SizedBox(height: 10),
-            _MenuWidget(menuRow: thirdMenuRow, textTag: 'Business'),
-            SizedBox(height: 10),
-            _MenuWidget(menuRow: fourtMenuRow, textTag: 'Help'),
-          ],
-        ),
+      body: ListView(
+        children: [
+          _UserIconWidget(),
+          _MenuWidget(menuRow: firstMenuRow, textTag: 'Account'),
+          SizedBox(height: 10),
+          _MenuWidget(menuRow: secondMenuRow, textTag: 'Settings'),
+          SizedBox(height: 10),
+          _MenuWidget(menuRow: thirdMenuRow, textTag: 'Business'),
+          SizedBox(height: 10),
+          _MenuWidget(menuRow: fourtMenuRow, textTag: 'Help'),
+        ],
       ),
     );
   }
@@ -99,7 +97,13 @@ class _MenuWidgetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Material(
+      color: Colors.transparent,
+    child: InkWell(
+      onTap: () => {},
+      borderRadius: BorderRadius.circular(10),
+      splashColor: Colors.white10,
+      child: Padding(
       padding: const EdgeInsets.all(8.0),
       child: data._icon != null
       ? Column(
@@ -133,7 +137,8 @@ class _MenuWidgetRow extends StatelessWidget {
             Divider(height: 2, color: Colors.black,)
         ],
       ),
-    );
+    )
+    ));
   }
 }
 
