@@ -14,11 +14,11 @@
 
 Главный экран профиля:
 
-![Главный экран профиля](assets/screenshots/screen1.jpg)
+![Главный экран профиля](assets/images/screenshots/screen1.jpg)
 
 Меню настроек:
 
-![Меню настроек](assets/screenshots/screen2.jpg)
+![Меню настроек](assets/images/screenshots/screen2.jpg)
 
 ---
 
